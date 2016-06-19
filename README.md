@@ -1,4 +1,4 @@
-docker-xc8
+docker-xc32
 =============
 
 [MPLAB XC-32](https://www.microchip.com/mplab/compilers): MPLAB XC-32 Cross Compiler, Docker Container
