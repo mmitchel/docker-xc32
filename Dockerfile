@@ -28,7 +28,7 @@ RUN dpkg --add-architecture i386 \
 #    && rm /tmp/xc16.run
 #ENV PATH /opt/microchip/xc16/bin:$PATH
 
-## Download and Install XC32 Compiler, Current Version
+# Download and Install XC32 Compiler, Current Version
 RUN curl -fSL -A "Mozilla/4.0" -o /tmp/xc32.run "http://www.microchip.com/mplabxc32linux" \
     && chmod a+x /tmp/xc32.run \
     && /tmp/xc32.run --mode unattended --unattendedmodeui none \
@@ -40,7 +40,7 @@ ENV PATH /opt/microchip/xc32/bin:$PATH
 #RUN curl -fSL -A "Mozilla/4.0" -o /tmp/mplabx-installer.tar "http://www.microchip.com/mplabx-ide-linux-installer" \
 #    && tar xf /tmp/mplabx-installer.tar && rm /tmp/mplabx-installer.tar \
 #    && USER=root ./*-installer.sh --nox11 \
-#        -- --unattendedmodeui none --mode unattended --prefix /opt/microchip/mplabx \
+#        -- --unattendedmodeui none --mode unattended --installdir /opt/microchip/mplabx \
 #    && rm ./*-installer.sh
 #ENV PATH /opt/microchip/mplabx/mplab_ide/bin:$PATH
 
